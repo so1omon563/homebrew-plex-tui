@@ -3,8 +3,8 @@ class PlexTui < Formula
 
   desc "Standalone Plex terminal UI with mpv playback"
   homepage "https://github.com/so1omon563/plex-tui"
-  url "https://files.pythonhosted.org/packages/2b/03/08fb0452fe2bda901f0e7daf51b7358f1fc33d4d5f98d07048fee7376a4f/plex_tui-0.3.41.tar.gz"
-  sha256 "416b377d2931edc2a92681d8b2b2555c3a782eab08c188952cf5a63c8f3647d3"
+  url "https://files.pythonhosted.org/packages/70/a2/1e16f991aaff84a684a53d34940e93268c77e83026c51d46de26f7c709e3/plex_tui-0.3.43.tar.gz"
+  sha256 "27d9f83d7bf62f745d811f581c05b1db230caf427eacaf610d4916a888950bb8"
   license "MIT"
 
   depends_on "mpv"
@@ -100,7 +100,7 @@ class PlexTui < Formula
   end
 
   test do
-    assert_match "plex-tui 0.3.41", shell_output("#{bin}/plex-tui --version")
+    assert_match "plex-tui 0.3.43", shell_output("#{bin}/plex-tui --version")
     assert_match "plex-tui smoke ok", shell_output("#{bin}/plex-tui --smoke")
   end
 end
