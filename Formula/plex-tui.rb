@@ -3,16 +3,16 @@ class PlexTui < Formula
 
   desc "Standalone Plex terminal UI with mpv playback"
   homepage "https://github.com/so1omon563/plex-tui"
-  url "https://files.pythonhosted.org/packages/70/a2/1e16f991aaff84a684a53d34940e93268c77e83026c51d46de26f7c709e3/plex_tui-0.3.43.tar.gz"
-  sha256 "27d9f83d7bf62f745d811f581c05b1db230caf427eacaf610d4916a888950bb8"
+  url "https://files.pythonhosted.org/packages/0c/24/a68d256381d21036c392f284357e68bf549d99fc5db0a960570ebc1db619/plex_tui-0.4.0.tar.gz"
+  sha256 "f164fcc0de12731198903999988faa1c2ebfa755a134ae25a9286c293ae0872a"
   license "MIT"
 
   depends_on "mpv"
   depends_on "python@3.13"
 
   resource "certifi" do
-    url "https://files.pythonhosted.org/packages/f3/ce/ee2ecad540810a79593028e88299baeae54d346cc7a0d94b6199988b89b1/certifi-2026.5.20.tar.gz"
-    sha256 "69dea482ab64caa7b9f6aba1c6bf48bb6a5448d1c0f1b17ab42ad8c763a5344d"
+    url "https://files.pythonhosted.org/packages/c9/c7/424b75da314c1045981bd9777432fad05a9e0c69daa4ed7e308bbaffe405/certifi-2026.6.17.tar.gz"
+    sha256 "024c88eeec92ca068db80f02b8b07c9cef7b9fe261d1d535abfd5abd6f6af432"
   end
 
   resource "charset-normalizer" do
@@ -100,7 +100,7 @@ class PlexTui < Formula
   end
 
   test do
-    assert_match "plex-tui 0.3.43", shell_output("#{bin}/plex-tui --version")
+    assert_match "plex-tui 0.4.0", shell_output("#{bin}/plex-tui --version")
     assert_match "plex-tui smoke ok", shell_output("#{bin}/plex-tui --smoke")
   end
 end
