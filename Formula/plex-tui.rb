@@ -7,6 +7,11 @@ class PlexTui < Formula
   sha256 "06d452ae9ede8444399d2c8060ccac595612b70c39c2d307fd8d7158c290cdf6"
   license "MIT"
 
+  bottle do
+    root_url "https://github.com/so1omon563/homebrew-plex-tui/releases/download/plex-tui-0.4.2"
+    sha256 cellar: :any, arm64_sequoia: "8223c58cdf4dbb3ec05b62aa88fdf23e62c53326317fbf492713f67f5c1c8f28"
+  end
+
   depends_on "mpv"
   depends_on "python@3.13"
 
