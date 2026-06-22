@@ -3,13 +3,13 @@ class PlexTui < Formula
 
   desc "Standalone Plex terminal UI with mpv playback"
   homepage "https://github.com/so1omon563/plex-tui"
-  url "https://files.pythonhosted.org/packages/5b/56/4620a2fea8769d4f359df05ff21b4d9937d15045f7fb9875ed2ce437889b/plex_tui-0.7.1.tar.gz"
-  sha256 "534dd321a2151b9367a52b7a0ffca9d2367656981d0a96dbd4e98122d2d8d189"
+  url "https://files.pythonhosted.org/packages/e3/c3/a3f25a5c79e68e03e2936cfeeb97947a09385fed5e13c8703eb9dbb35f1b/plex_tui-0.11.1.tar.gz"
+  sha256 "91e86422a083ec647dfad20cd344186bc8a41189cb13c7ec8c431cd0541ffe0e"
   license "MIT"
 
   bottle do
-    root_url "https://github.com/so1omon563/homebrew-plex-tui/releases/download/plex-tui-0.7.1"
-    sha256 cellar: :any, arm64_sequoia: "ce040340f58dc3284227b18990b912abb8544c1e80f868182ce71d53b47c7b18"
+    root_url "https://github.com/so1omon563/homebrew-plex-tui/releases/download/plex-tui-0.11.1"
+    sha256 cellar: :any, arm64_sequoia: "deee953a3160d838031a7fe287a2b16ec77200471c16422c6c633d93ba318609"
   end
 
   depends_on "mpv"
@@ -105,7 +105,7 @@ class PlexTui < Formula
   end
 
   test do
-    assert_match "plex-tui 0.7.1", shell_output("#{bin}/plex-tui --version")
+    assert_match "plex-tui 0.11.1", shell_output("#{bin}/plex-tui --version")
     assert_match "plex-tui smoke ok", shell_output("#{bin}/plex-tui --smoke")
   end
 end
