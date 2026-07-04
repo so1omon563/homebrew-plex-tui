@@ -3,13 +3,13 @@ class PlexTui < Formula
 
   desc "Standalone Plex terminal UI with mpv playback"
   homepage "https://github.com/so1omon563/plex-tui"
-  url "https://files.pythonhosted.org/packages/47/24/6b334f07c3c37b0471dda6abfe415ac8f9bdbded9b26f766c26d416a972e/plex_tui-0.14.2.tar.gz"
-  sha256 "afbb841997ca026d9d65ad67a52ab187034c777ad6e8b0645721023071700b54"
+  url "https://files.pythonhosted.org/packages/92/58/b6227d4057b436730c83e28f7da98ee0c9e847fa4b9c863cddcc812b491a/plex_tui-0.15.12.tar.gz"
+  sha256 "37849ee8950685eea7145472585360c8762fc5657950e058a7b912064aee5c41"
   license "MIT"
 
   bottle do
-    root_url "https://github.com/so1omon563/homebrew-plex-tui/releases/download/plex-tui-0.14.2"
-    sha256 cellar: :any, arm64_tahoe: "b7cd763e67b3e5f4ea7d6c04c83e0f55eff3ae41a3cc38a2241588df94ae19b1"
+    root_url "https://github.com/so1omon563/homebrew-plex-tui/releases/download/plex-tui-0.15.12"
+    sha256 cellar: :any, arm64_sequoia: "b43f38686d072e9dc2361f15f8bd28f18a913d5038c09afe5504dbd6a1bcc32b"
   end
 
   depends_on "mpv"
@@ -51,8 +51,8 @@ class PlexTui < Formula
   end
 
   resource "pillow" do
-    url "https://files.pythonhosted.org/packages/8c/21/c2bcdd5906101a30244eaffc1b6e6ce71a31bd0742a01eb89e660ebfac2d/pillow-12.2.0.tar.gz"
-    sha256 "a830b1a40919539d07806aa58e1b114df53ddd43213d9c8b75847eee6c0182b5"
+    url "https://files.pythonhosted.org/packages/1c/3d/bb7fca845737cf9d7dbde16ed1843984665ff2e0a518f5db43e77ec540b9/pillow-12.3.0.tar.gz"
+    sha256 "3b8182a766685eaa002637e28b4ec8d6b18819a0c71f579bf0dbaa5830297cce"
   end
 
   resource "platformdirs" do
@@ -81,13 +81,13 @@ class PlexTui < Formula
   end
 
   resource "textual" do
-    url "https://files.pythonhosted.org/packages/9b/7a/c519db0aba5024f86e71e9631810bfdd6866ed2c8695bd7fa34b90e7ef59/textual-8.2.7.tar.gz"
-    sha256 "658f568ff81e30ed43890c3e07520390e5cf1b4763822006e060656b0a88f105"
+    url "https://files.pythonhosted.org/packages/00/21/39a76b01bd5eea82a04baaca7580e105d8c59450df03998345bb2cfb307b/textual-8.2.8.tar.gz"
+    sha256 "3f106a9fbc73e39dd266c9712432087de78a6d644084c7c241d6a25c3169115b"
   end
 
   resource "typing-extensions" do
-    url "https://files.pythonhosted.org/packages/72/94/1a15dd82efb362ac84269196e94cf00f187f7ed21c242792a923cdb1c61f/typing_extensions-4.15.0.tar.gz"
-    sha256 "0cea48d173cc12fa28ecabc3b837ea3cf6f38c6d1136f85cbaaf598984861466"
+    url "https://files.pythonhosted.org/packages/f6/cc/6253133b5bb138fc3306cebfbda2c520f545d36b5be2c7255cc528bb45d6/typing_extensions-4.16.0.tar.gz"
+    sha256 "dc983d19a509c94dba722ee6abd33940f7c05a89e243c47e907eb4db6f1a43e5"
   end
 
   resource "uc-micro-py" do
@@ -105,7 +105,7 @@ class PlexTui < Formula
   end
 
   test do
-    assert_match "plex-tui 0.14.2", shell_output("#{bin}/plex-tui --version")
+    assert_match "plex-tui 0.15.12", shell_output("#{bin}/plex-tui --version")
     assert_match "plex-tui smoke ok", shell_output("#{bin}/plex-tui --smoke")
   end
 end
