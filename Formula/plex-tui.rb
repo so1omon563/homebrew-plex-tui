@@ -3,13 +3,13 @@ class PlexTui < Formula
 
   desc "Standalone Plex terminal UI with mpv playback"
   homepage "https://github.com/so1omon563/plex-tui"
-  url "https://files.pythonhosted.org/packages/0c/fd/7457cfa8ff63644450bd1571714169161f3489490e45d9281e65486fb514/plex_tui-0.16.1.tar.gz"
-  sha256 "ed52cecd5ab679e9a2440d498ba19f43a8114a8a9e6af214faeb64ade0d09a19"
+  url "https://files.pythonhosted.org/packages/80/ab/893cfc95fcf84e67a9cc2f851569fd81aaa4a3cb06f2bf359244216ba46a/plex_tui-0.16.3.tar.gz"
+  sha256 "18f9e8889b1a26ee58762a856e5d2ed52e07fe2f898bc2ce9eadcb6980142a2e"
   license "MIT"
 
   bottle do
-    root_url "https://github.com/so1omon563/homebrew-plex-tui/releases/download/plex-tui-0.16.1"
-    sha256 cellar: :any, arm64_tahoe: "cf835a22cb8528b90a9dc8c53a4eea7d878f1df20c03669fffe2af1f8b48cef8"
+    root_url "https://github.com/so1omon563/homebrew-plex-tui/releases/download/plex-tui-0.16.3"
+    sha256 cellar: :any, arm64_sequoia: "f6e84935d1a71b5431d2fd0f8d51f53cc53bc3ee1dcb36aa040dcb5b7fcd21e1"
   end
 
   depends_on "mpv"
@@ -21,8 +21,8 @@ class PlexTui < Formula
   end
 
   resource "charset-normalizer" do
-    url "https://files.pythonhosted.org/packages/e7/a1/67fe25fac3c7642725500a3f6cfe5821ad557c3abb11c9d20d12c7008d3e/charset_normalizer-3.4.7.tar.gz"
-    sha256 "ae89db9e5f98a11a4bf50407d4363e7b09b31e55bc117b4f7d80aab97ba009e5"
+    url "https://files.pythonhosted.org/packages/20/56/10a88e00039537d74bd420f0457c52ab8f58a1af56126e3b9f1b1c8c4724/charset_normalizer-3.4.8.tar.gz"
+    sha256 "d9bf144d6faf12c70d58e47f7512992ae2882b820031d6cef68152deb645bf2d"
   end
 
   resource "idna" do
@@ -105,7 +105,7 @@ class PlexTui < Formula
   end
 
   test do
-    assert_match "plex-tui 0.16.1", shell_output("#{bin}/plex-tui --version")
+    assert_match "plex-tui 0.16.3", shell_output("#{bin}/plex-tui --version")
     assert_match "plex-tui smoke ok", shell_output("#{bin}/plex-tui --smoke")
   end
 end
