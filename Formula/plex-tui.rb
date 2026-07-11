@@ -3,13 +3,13 @@ class PlexTui < Formula
 
   desc "Standalone Plex terminal UI with mpv playback"
   homepage "https://github.com/so1omon563/plex-tui"
-  url "https://files.pythonhosted.org/packages/fa/91/4cd9c4ea2837a63d26273b52253afd6909cb966b60dc271007fafddcb0d4/plex_tui-0.16.8.tar.gz"
-  sha256 "75b161020646e0de8519c44c7841cc15799c85c57c99116a559f92387e4988af"
+  url "https://files.pythonhosted.org/packages/9d/d1/f9ca6fc29c5fd5a2c211fa03831bdb10c58a43fb1b4ab664c2f31b5ab3ef/plex_tui-0.16.17.tar.gz"
+  sha256 "3765c033a9825a2d7be834fee10764594f2c2c32c39c7e007274d336410f5792"
   license "MIT"
 
   bottle do
-    root_url "https://github.com/so1omon563/homebrew-plex-tui/releases/download/plex-tui-0.16.8"
-    sha256 cellar: :any, arm64_sequoia: "478367fad60f27f0cd1f5ecde30b942208fb95c50bd77e2317be7c80e39b4f3c"
+    root_url "https://github.com/so1omon563/homebrew-plex-tui/releases/download/plex-tui-0.16.17"
+    sha256 cellar: :any, arm64_sequoia: "a267b26537eb2b2058baf32fe9f98a4acbf0bff89f34ff14c9255e5d9327e986"
   end
 
   depends_on "mpv"
@@ -21,8 +21,8 @@ class PlexTui < Formula
   end
 
   resource "charset-normalizer" do
-    url "https://files.pythonhosted.org/packages/20/56/10a88e00039537d74bd420f0457c52ab8f58a1af56126e3b9f1b1c8c4724/charset_normalizer-3.4.8.tar.gz"
-    sha256 "d9bf144d6faf12c70d58e47f7512992ae2882b820031d6cef68152deb645bf2d"
+    url "https://files.pythonhosted.org/packages/bd/2a/23f34ec9d04624958e137efdc394888716353190e75f25dd22c7a2c7a8aa/charset_normalizer-3.4.9.tar.gz"
+    sha256 "673611bbd43f0810bec0b0f028ddeaaa501190339cac411f347ac76917c3ae7b"
   end
 
   resource "idna" do
@@ -61,8 +61,8 @@ class PlexTui < Formula
   end
 
   resource "PlexAPI" do
-    url "https://files.pythonhosted.org/packages/e6/37/5b3d926db8f5cfe20bb8d9652df0272ca23fa028f3b2798038ec41218ca1/plexapi-4.18.1.tar.gz"
-    sha256 "deba96e94b8b51fc0b042334ebbd48a14e407efd33f281a5d8e9897f9e5dba5f"
+    url "https://files.pythonhosted.org/packages/ed/3c/3b4653985ef7fa68fffa0ca686ea6f71217cf0f670263dfd002d8c5ff0bc/plexapi-4.18.2.tar.gz"
+    sha256 "865a90cf44193e750605dec35fc6e1038a15b6f0bda5b3e1779bbe286f7e1da1"
   end
 
   resource "Pygments" do
@@ -105,7 +105,7 @@ class PlexTui < Formula
   end
 
   test do
-    assert_match "plex-tui 0.16.8", shell_output("#{bin}/plex-tui --version")
+    assert_match "plex-tui 0.16.17", shell_output("#{bin}/plex-tui --version")
     assert_match "plex-tui smoke ok", shell_output("#{bin}/plex-tui --smoke")
   end
 end
