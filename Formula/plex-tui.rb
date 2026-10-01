@@ -3,13 +3,13 @@ class PlexTui < Formula
 
   desc "Standalone Plex terminal UI with mpv playback"
   homepage "https://github.com/so1omon563/plex-tui"
-  url "https://files.pythonhosted.org/packages/32/47/d8e8b5f03baf5f9b1f1b2a920a214639582f4478efeceaf80dc7ec50296f/plex_tui-0.17.29.tar.gz"
-  sha256 "cf5e02b368e3d5851155ce342774c95045a201b4ae8af648f5dd2fc32626a82a"
+  url "https://files.pythonhosted.org/packages/c5/a5/f509bdc0cd5cec37860380d17c5ed5786331e0791bd5a5a97b14d154c275/plex_tui-0.17.31.tar.gz"
+  sha256 "a8bdf8abe32a288c45a8b5adfc411b0c293061309a1d4c94dea6ea1ee98e2ecb"
   license "MIT"
 
   bottle do
-    root_url "https://github.com/so1omon563/homebrew-plex-tui/releases/download/plex-tui-0.17.29"
-    sha256 cellar: :any, arm64_sequoia: "4b54ed583fbfaeaaf8f732e5d4ba7fc33da561ec1216566b750f2be084528d13"
+    root_url "https://github.com/so1omon563/homebrew-plex-tui/releases/download/plex-tui-0.17.31"
+    sha256 cellar: :any, arm64_sequoia: "41b55105e71bc0d77eda990c5e4074e90bd2c082a6d1e4158b9bc5421b826483"
   end
 
   depends_on "mpv"
@@ -21,18 +21,18 @@ class PlexTui < Formula
   end
 
   resource "charset-normalizer" do
-    url "https://files.pythonhosted.org/packages/e5/3f/143b048436775b0f76ac3eec145c019e8173ccc2885c8f20319b996d5e83/charset_normalizer-3.5.1.tar.gz"
-    sha256 "6117b84ea48435e5356dc737f5121485c30920ba43375fa7b434fd753df0eac3"
+    url "https://files.pythonhosted.org/packages/33/1c/f41d4e74c28ab327ff3acd36053f7ea506c55872d7a90b0fa71aa3ab0c89/charset_normalizer-3.5.2.tar.gz"
+    sha256 "39de2a259fc954455c57274dc94c79d5842774e1247a016aff30bc0efed0f4ef"
   end
 
   resource "idna" do
-    url "https://files.pythonhosted.org/packages/5f/f7/abb373e5757eaec4b922b92f97ec8d6d7e057cf06778247604fbc4e7c3f3/idna-3.19.tar.gz"
-    sha256 "5e0811a4383b21dc5838069f801c4fb62113b7447663d2530d2bd6e77b49bf15"
+    url "https://files.pythonhosted.org/packages/f5/08/8eea9d4b8302028f3abb2c0813953f7aec26d33b7a8960ed760e65ff29fa/idna-3.20.tar.gz"
+    sha256 "a7db850025b95ded1eae8a46181a1a6c56c92c96f0e2b005d9ff8dc0210cab44"
   end
 
   resource "linkify-it-py" do
-    url "https://files.pythonhosted.org/packages/53/3e/79f35b8c31a1881893b7e62be80b2573f06e38db47c33065749293ee1b97/linkify_it_py-2.1.1.tar.gz"
-    sha256 "a78f40fee177eb912e9d2375074108378523c38d3fde5d3ee804f465b6cfbfee"
+    url "https://files.pythonhosted.org/packages/45/98/7a1a5f31fd5c7ba93e963b168e244b8e3dd705b3d2a718e3c3307583bf57/linkify_it_py-2.2.0.tar.gz"
+    sha256 "907acd2d17ac1fbb9ddb62c8957ccbd6158cac602231a15c3b0cd1e215f03cee"
   end
 
   resource "markdown-it-py" do
@@ -56,13 +56,13 @@ class PlexTui < Formula
   end
 
   resource "platformdirs" do
-    url "https://files.pythonhosted.org/packages/50/bb/ebc6636e1ae41314f796ebb7215fd28febb45f9aac72f2b04cb74b5071dc/platformdirs-4.11.4.tar.gz"
-    sha256 "f3373be828247211d0febabea97e238c3dfde8a60b3c90c32756fb52cb21556d"
+    url "https://files.pythonhosted.org/packages/17/c8/721b3855fe457da514fe249247d404b9b39c5d16532278f70ebaa6acf18b/platformdirs-4.12.2.tar.gz"
+    sha256 "eab5f70271a490ef74618bb314fbb86e3c7e82fa3b9c922c2ea0e0a1a155d329"
   end
 
   resource "PlexAPI" do
-    url "https://files.pythonhosted.org/packages/ed/3c/3b4653985ef7fa68fffa0ca686ea6f71217cf0f670263dfd002d8c5ff0bc/plexapi-4.18.2.tar.gz"
-    sha256 "865a90cf44193e750605dec35fc6e1038a15b6f0bda5b3e1779bbe286f7e1da1"
+    url "https://files.pythonhosted.org/packages/68/69/e8b69e19998ddc91799ef1fa639380c60c3f1e92d018d1ca8702dca2b7bd/plexapi-4.18.3.tar.gz"
+    sha256 "6c34977ccf7057b204aa5d904f15ff41ea8831df05fedf51432adaa3124d7551"
   end
 
   resource "Pygments" do
@@ -90,14 +90,9 @@ class PlexTui < Formula
     sha256 "dc983d19a509c94dba722ee6abd33940f7c05a89e243c47e907eb4db6f1a43e5"
   end
 
-  resource "uc-micro-py" do
-    url "https://files.pythonhosted.org/packages/78/67/9a363818028526e2d4579334460df777115bdec1bb77c08f9db88f6389f2/uc_micro_py-2.0.0.tar.gz"
-    sha256 "c53691e495c8db60e16ffc4861a35469b0ba0821fe409a8a7a0a71864d33a811"
-  end
-
   resource "urllib3" do
-    url "https://files.pythonhosted.org/packages/53/0c/06f8b233b8fd13b9e5ee11424ef85419ba0d8ba0b3138bf360be2ff56953/urllib3-2.7.0.tar.gz"
-    sha256 "231e0ec3b63ceb14667c67be60f2f2c40a518cb38b03af60abc813da26505f4c"
+    url "https://files.pythonhosted.org/packages/e3/05/b17359e1cefb4f909b5e40b1b90a496d987258916dbbf88e842c729f510e/urllib3-2.8.0.tar.gz"
+    sha256 "63bf2ead4c879426ebf22ef2a781eeb4aa3b4ae798a0435506f8687fd5bb9b63"
   end
 
   def install
@@ -105,7 +100,7 @@ class PlexTui < Formula
   end
 
   test do
-    assert_match "plex-tui 0.17.29", shell_output("#{bin}/plex-tui --version")
+    assert_match "plex-tui 0.17.31", shell_output("#{bin}/plex-tui --version")
     assert_match "plex-tui smoke ok", shell_output("#{bin}/plex-tui --smoke")
   end
 end
