@@ -3,13 +3,13 @@ class PlexTui < Formula
 
   desc "Standalone Plex terminal UI with mpv playback"
   homepage "https://github.com/so1omon563/plex-tui"
-  url "https://files.pythonhosted.org/packages/c5/a5/f509bdc0cd5cec37860380d17c5ed5786331e0791bd5a5a97b14d154c275/plex_tui-0.17.31.tar.gz"
-  sha256 "a8bdf8abe32a288c45a8b5adfc411b0c293061309a1d4c94dea6ea1ee98e2ecb"
+  url "https://files.pythonhosted.org/packages/fb/d8/40a34d9b20e7c20942c1181d9a6882e3541a72817caf779d9ef6ee5cc991/plex_tui-0.17.33.tar.gz"
+  sha256 "2d7102de05f58bf25208505c3c11fb1485aab7d7d288707bff8795dad4ff77ee"
   license "MIT"
 
   bottle do
-    root_url "https://github.com/so1omon563/homebrew-plex-tui/releases/download/plex-tui-0.17.31"
-    sha256 cellar: :any, arm64_sequoia: "41b55105e71bc0d77eda990c5e4074e90bd2c082a6d1e4158b9bc5421b826483"
+    root_url "https://github.com/so1omon563/homebrew-plex-tui/releases/download/plex-tui-0.17.33"
+    sha256 cellar: :any, arm64_sequoia: "d286d56909bd50a264f36d9b369218b9e2c7fd17888064f8e78ba1ecf76dfbf5"
   end
 
   depends_on "mpv"
@@ -56,8 +56,8 @@ class PlexTui < Formula
   end
 
   resource "platformdirs" do
-    url "https://files.pythonhosted.org/packages/17/c8/721b3855fe457da514fe249247d404b9b39c5d16532278f70ebaa6acf18b/platformdirs-4.12.2.tar.gz"
-    sha256 "eab5f70271a490ef74618bb314fbb86e3c7e82fa3b9c922c2ea0e0a1a155d329"
+    url "https://files.pythonhosted.org/packages/90/a1/d5f9002a70298c64a789779077d8dd90c10aa1f47fe40c86802df874f2a6/platformdirs-4.12.4.tar.gz"
+    sha256 "63743c02414e755de4e31b8f68125c1407495b86c5a006e203c01ff8b9924250"
   end
 
   resource "PlexAPI" do
@@ -100,7 +100,7 @@ class PlexTui < Formula
   end
 
   test do
-    assert_match "plex-tui 0.17.31", shell_output("#{bin}/plex-tui --version")
+    assert_match "plex-tui 0.17.33", shell_output("#{bin}/plex-tui --version")
     assert_match "plex-tui smoke ok", shell_output("#{bin}/plex-tui --smoke")
   end
 end
